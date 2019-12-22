@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="showHideUserDetails()">Display Value</button>
+    </div>
+    <div class="col-xs-12"> 
+      <p *ngIf="showUserDetails == true">Name : Rtuis  education : MCA</p>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-xs-12">
+        Event Log
+      </div>
+    </div>
+  <div class="row">
+      <div class="col-xs-12" *ngFor="let log of logData; let currentIndex = index"> 
+        <p [ngStyle]="{backgroundColor:currentIndex >= 5 ? 'blue' : 'white'}"
+          [ngClass]="{'whiteFont' :currentIndex >=5}">{{log}}</p>
+      </div>
+</div>

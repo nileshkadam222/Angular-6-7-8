@@ -1,0 +1,17 @@
+<h1>ngFor with track by method</h1>
+
+<table>
+  <th>id</th>
+  <th>Name</th>
+  <th>age</th>
+  <tr *ngFor="let student of students; let i = index; TrackBy:trackByStudentId">
+    <td>{{student.id}}</td>
+    <td>{{student.name}}</td>
+    <td>{{student.age}}</td>
+  </tr>
+</table>
+
+
+<button (click)="getMoreData()">get more students</button>
+
+<router-outlet></router-outlet>

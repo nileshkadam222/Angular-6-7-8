@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <span><h3>Assignment 2</h3></span>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-6">
+        <input type="text" class="form-control" [(ngModel)]="userName"/>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+         <p>{{userName}}</p>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6">
+           <button class="btn btn-primary" [disabled]="userName == undefined || userName == ''" (click)="clearUsername()">Clear Field</button>
+          </div>
+        </div>
+  </div>

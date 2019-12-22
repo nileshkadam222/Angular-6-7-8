@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>ngFor grouping</h1>
+
+<ul *ngFor="let u of student">
+  <li>
+    {{u.country}}
+  </li>
+  <ul *ngFor="let m of u.users">
+    <li>{{m.name}}</li>
+  </ul>
+</ul>
+
+<router-outlet></router-outlet>

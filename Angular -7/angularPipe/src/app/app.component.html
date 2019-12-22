@@ -1,0 +1,41 @@
+<h1>PIPE In angular ( | ) </h1>
+
+<h3>Uppercase and lowercase</h3>
+<table>
+  <th>Emp Code</th>
+  <th>Emp Name</th>
+  <th>Join Date</th>
+  <th>Salary</th>
+  <tr *ngFor="let emp of employee">
+    <td>{{emp.empCode | uppercase}}</td>
+    <td>{{emp.empName | lowercase}}</td>
+    <td>{{emp.joinDate}}</td>
+    <td>{{emp.salary}}</td>
+  </tr>
+</table>
+
+<h2>Parameter pipe</h2>
+<h4>Date</h4>
+<p>Date of birth : {{dob}}</p>
+<br>medium  : {{dob |date:"medium"}}<br>
+Specific format : {{dob |date : "dd/mm/yy"}}<br>
+MediumTime : {{dob | date : "mediumTime"}}
+
+<h4>currency</h4><br>
+{{salary | currency:"USD":true}}
+<h4>Multiple pipe</h4>
+<br>medium  : {{dob |date:"medium" | lowercase}}<br>
+<br><h4>titlecase</h4>
+{{name | titlecase}}
+<h4>Slice example</h4>
+{{name | slice :6}}
+
+<h4>percent example</h4>
+{{salary | percent}}<br>
+{{salary | percent:"2.4-8"}}
+
+<h4>number example</h4>
+{{salary | number}}<br>
+{{salary | number:"2.4-8"}}
+
+<router-outlet></router-outlet>

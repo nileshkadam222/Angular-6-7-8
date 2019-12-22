@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+employee
+<table>
+  <th>Name</th>
+  <th>Age</th>
+  <th>gender</th>
+  <tr *ngFor="let emp of employee">
+    <td >{{emp.name |genderName:emp.gender}}</td>
+    <td >{{emp.age}}</td>
+    <td >{{emp.gender}}</td>
+  </tr>
+</table>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <input type="text" class=" form-control" [(ngModel)]="serverName"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <button class="form-control" (click)="addNewServer()">Add Server</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <span *ngIf="serverCreated else noServerCreated">Server Name is =  {{serverName}} and server status is {{serverStatus}}</span>
+            <ng-template #noServerCreated>
+                <p>No server Created Status is {{serverStatus}}</p>
+            </ng-template>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <span [ngStyle]="{backgroundColor:getColor()}" [ngClass]="{online:serverStatus.toLowerCase() ==='online'}">
+                Server Status is : {{serverStatus}}
+            </span>
+        </div>
+    </div>
+
+    <h4>List of all Servers</h4>
+    <div *ngFor="let server of serverList" class="row">
+            <div class="col-xs-12">
+                <span [ngStyle]="{backgroundColor:getColor()}" [ngClass]="{online:serverStatus.toLowerCase() ==='online'}">
+                    Server name is {{server.name}} and Server Status is : {{server.status}}
+                </span>
+            </div>
+        </div>
+</div>

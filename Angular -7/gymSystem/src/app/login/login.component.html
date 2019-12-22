@@ -1,0 +1,14 @@
+<p>
+  login works!
+</p>
+<div class="col-md-6">
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="User Name" value="Sushi">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </mat-form-field>
+  </form>
+</div>
