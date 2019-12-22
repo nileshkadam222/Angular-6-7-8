@@ -1,0 +1,25 @@
+  function Product(name,price) // Constructor Functions
+        {
+            this.Name = name;
+            this.Price = price;
+            this.Data = [];
+            
+            //server call simulation
+            this.GetData = function()
+            {
+                setTimeout(
+                    function ()
+                    {
+                        this.Data = [1,2,3];
+                    },
+                    5000
+                )
+                
+            }
+        }
+        var p1 = new Product();
+        p1.GetData();
+
+after timeout p1 object is no longer then the data is added into window.dada object hence the window object keep adding data 
+
+

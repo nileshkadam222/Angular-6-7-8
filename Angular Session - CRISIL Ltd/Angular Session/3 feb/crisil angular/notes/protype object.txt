@@ -1,0 +1,14 @@
+var tool = this; // tool window object
+
+ function Product(name,price) // Constructor Functions
+        {
+            this.Name = name;
+            this.Price = price;
+        }
+Product.prototype.GetDetails = function(){ return this.Name }
+
+        tool.p1 = new Product("Mobiles",10000);
+        tool.p2 = new Product("Laptops",50000);
+
+
+// create a new object prototype for every function. this is parent of object

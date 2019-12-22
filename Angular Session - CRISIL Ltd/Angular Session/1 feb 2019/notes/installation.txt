@@ -1,0 +1,14 @@
+\\mumchdskesr01\Softwares
+
+Install NodeJS (v10)
+npm uninstall -g @angular/cli 
+npm install -g @angular/cli
+navigate to an empty directory
+ng new web-app
+ - folder structure
+ - install all node packages required
+npm start > ng server > build your files > launch moc server on port 4200
+ng --version //7.1.4
+
+ 
+

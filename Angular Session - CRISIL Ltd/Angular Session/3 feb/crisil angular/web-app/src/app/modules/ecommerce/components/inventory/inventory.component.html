@@ -1,0 +1,55 @@
+<h3>
+  Inventory
+</h3>
+
+<h4>
+  Second Level Navigation
+</h4>
+
+<nav>
+  <ul>
+    <li>
+      <a routerLink="list">
+        View Products
+      </a>
+    </li>
+    <li>
+      <a routerLink="entry">
+        Add Products
+      </a>
+    </li>
+  </ul>  
+</nav>
+
+<!-- Second Level Router Outlet -->
+<router-outlet></router-outlet>
+
+<!--
+<div>
+  <span>Display Products</span>
+  <input type="checkbox" [(ngModel)]="ShowProducts" />
+</div>
+-->
+
+<!--
+<app-entry (OnProductSave)="AddProductToList($event)"></app-entry>
+-->
+
+<!--
+<app-list [Products]="ProductList" *ngIf="ShowProducts">
+  <header>
+    <h4>
+      <b>
+        <u>
+          Here are the list of products available
+        </u>
+      </b>
+    </h4>
+  </header>
+  <footer>
+    <i>
+      Product prices as per end of day yesterday
+    </i>
+  </footer>
+</app-list>
+-->

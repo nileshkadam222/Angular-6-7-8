@@ -1,0 +1,33 @@
+  function Product(name,price) // Constructor Functions
+        {
+            this.Name = name;
+            this.Price = price;
+            this.Data = [];
+            
+            //server call simulation
+            this.GetData = function()
+            {
+                function TimerTicked()
+                {
+                    this.Data = [1,2,3];
+                }
+
+                // this will be p1
+                var bindedTimerTicked = TimerTicked.bind(this);
+
+                setTimeout(
+                    bindedTimerTicked,
+                    5000
+                )
+                
+            }
+        }
+        var p1 = new Product();
+        p1.GetData();
+
+//bind is used for binding the current refrence to the function
+
+if there is an ajax call who goes and give the response back after 2 sce the event loop will be finesh and the instance function remove from stack 
+-so for binding current function object 
+- keep object in memory till the timer/ajax completed
+-bind that data what you need

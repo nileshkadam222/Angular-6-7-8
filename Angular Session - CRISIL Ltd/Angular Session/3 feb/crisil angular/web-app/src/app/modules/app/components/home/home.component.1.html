@@ -1,0 +1,70 @@
+<!-- 
+  Data binding 
+    1. using expression = {{AppName}}
+    2. With attributes[] = [title]="AppVersion" 
+    3. (click)="handleRefresh();"
+    4. Two way data binding - AppDescription [value] (input)
+
+  Directive
+    1. [(ngModel)]="AppDescription"  
+-->
+<h2 [title]="'Version ' + AppVersion">
+  {{AppName}} 
+</h2>
+
+<button (click)="handleRefresh($event);">
+  Refresh
+</button>
+
+<!-- <input type="text" [value]="AppDescription" (input)="handleDescriptionChange($event)"/> -->
+
+<!-- ngModel = directive 
+    Angular gives built in functionality for AppDescription such events/functions which is technically called directive.
+-->
+<input type="text" [(ngModel)]="AppDescription" />
+
+
+<div>
+  {{AppDescription}}
+</div>
+
+
+<section *ngIf="DataPoints.length > 0">
+  <h4>
+    JS Technologies    
+  </h4>
+  <ul>
+    <li *ngFor="let item of DataPoints">
+      {{item}}
+      <input type="text" [(ngModel)]="item" />
+    </li>
+  </ul>
+</section>
+
+<!-- Use ngIf for decision on page load and not for toggle i.e. check/uncheck by user -->
+
+<section>
+  <input type="checkbox" [(ngModel)]="IsActive" />
+  <div *ngIf="IsActive">
+    User is Active
+  </div>
+</section>
+
+
+<!-- If we use ngIf it will create the div and destroy the div -->
+<section>
+    <input type="checkbox" [(ngModel)]="IsActive"/>
+    <div [hidden]="!IsActive">
+      <section>
+        <h4>
+          JS Technologies
+        </h4>
+        <ul>
+          <li *ngFor="let item of DataPoints">
+            {{item}}
+            <input type="text" [(ngModel)]="item"/>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </section>

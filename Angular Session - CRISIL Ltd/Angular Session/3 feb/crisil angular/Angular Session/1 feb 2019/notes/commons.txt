@@ -1,0 +1,15 @@
+what we required :
+
+
+
+
+npm start ---> to statr the server
+
+
+angular skeletone App
+angular-cli
+
+
+angular cli -> 
+
+1. ng generate 

@@ -1,0 +1,38 @@
+<!--
+<h4>
+    Existing Products
+</h4>
+-->
+<!-- ng-content - a structural directive which cut paste the html content from parent component to child component 
+     select = header = id/class/attribute based
+-->
+<!--
+<ng-content select="header"></ng-content>
+-->
+
+<table [ngStyle]="HoverStyle">
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Brand</td>
+      <td>Price</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of Products">
+      <td>
+        {{product.Name}}
+      </td>
+      <td>
+        {{product.Brand}}
+      </td>
+      <td>
+        {{product.Price}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--
+<ng-content select="footer"></ng-content>
+-->

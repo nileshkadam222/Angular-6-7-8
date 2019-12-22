@@ -1,0 +1,23 @@
+<h2 [title]="'version ' + appVersion">App Name : {{appName}} </h2><br>
+<h2>App Version : {{appVersion}} </h2> 
+<button (click) ="handleRefresh($event)">Refresh</button>
+
+<input type="text" [value]="appDescription" (input)="handleDescriptionChange($event)"/>
+<br>
+
+<input type="text"  [(ngModel)]="appDescription"/> 
+
+<section *ngIf="dataPoints.length >0 ">
+<h1>*ngFor</h1>
+<ul>
+  <li *ngFor="let item of dataPoints">{{item}}
+    <input type="text" [(ngModel)]="item"/>
+  </li></ul>
+
+</section>
+
+
+<section>
+<input type="checkbox" [(ngModel)]="isActive">user operation
+<div [hidden]="!isActive">User is Active</div>
+</section>
