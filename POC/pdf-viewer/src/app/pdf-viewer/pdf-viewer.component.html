@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-6 border" >
+        <div>
+            <label>Selected Text : {{pdfSelectedText}}</label>
+        </div>
+        <div>
+            <label>Top : {{top}}</label>
+        </div>
+        <div>
+            <label>Left : {{left}}</label>
+        </div>
+    </div>
+    <div class="col-6 border"><div class="row">
+        <div class="col-4"><label>PDF src</label></div>
+        <div class="col-4"><input type="text" placeholder="PDF src" [(ngModel)]="pdfSrc"></div>  
+    </div>
+    <div class="row pdf">
+    <div class="col-12">
+    <pdf-viewer (mouseup)="getSelectedText()" [src]="pdfSrc" 
+                [render-text]="true"
+                style="display: block;"
+    ></pdf-viewer>
+    </div>
+    </div></div>
+  </div>
+  
