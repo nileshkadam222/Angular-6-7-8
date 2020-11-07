@@ -1,8 +1,10 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Customer11 = void 0;
 var Customer11 = /** @class */ (function () {
-    function Customer11() {
-        this.firstName = "";
-        this._lastName = "";
+    function Customer11(firstName, _lastName) {
+        this.firstName = firstName;
+        this._lastName = _lastName;
     }
     Object.defineProperty(Customer11.prototype, "lastName", {
         get: function () {
@@ -26,11 +28,8 @@ var Customer11 = /** @class */ (function () {
     });
     return Customer11;
 }());
+exports.Customer11 = Customer11;
 //let CustomerInfo = new Customer11("Harshhu","Kadam");
 //CustomerInfo.firstName = "Nilesh";
 //CustomerInfo.lastName = "Kadak";
 //console.dir(CustomerInfo);
-var customerInfo1 = new Customer11();
-customerInfo1._firstName = "Nilesh";
-customerInfo1.lastName = "Kadam";
-console.log("First Name : " + customerInfo1._firstName + "  Last Name :" + customerInfo1.lastName);

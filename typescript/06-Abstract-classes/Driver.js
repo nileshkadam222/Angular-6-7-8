@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Cricle_1 = require("./Cricle");
+var Rectangle_1 = require("./Rectangle");
+//let myShape : Shape = new Shape(12,5);
+//console.log(myShape.getInfo());
+var myCricle = new Cricle_1.Cricle(10, 20, 30);
+console.log("Cricle Info : " + myCricle.getInfo());
+console.log("Circle Area : " + myCricle.calculateArea());
+var myRectangle = new Rectangle_1.Rectangle(12, 10, 11, 23);
+console.log("Rectangle Info= " + myRectangle.getInfo());
+console.log("Rectangle Area= " + myRectangle.calculateArea());

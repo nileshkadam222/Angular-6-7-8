@@ -1,6 +1,5 @@
-class Customer11{
-    private firstName : string = "";
-    private _lastName: String = "";
+export class Customer11{
+    constructor(private firstName : string,private _lastName: String ){}
     public get lastName(): String {
         return this._lastName;
     }
@@ -22,7 +21,3 @@ class Customer11{
 //CustomerInfo.lastName = "Kadak";
 //console.dir(CustomerInfo);
 
-let customerInfo1 = new Customer11();
-customerInfo1._firstName = "Nilesh";
-customerInfo1.lastName = "Kadam";
-console.log("First Name : "+customerInfo1._firstName + "  Last Name :" + customerInfo1.lastName );
